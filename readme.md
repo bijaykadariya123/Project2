@@ -18,8 +18,8 @@ This project will populate the Countries Name and flag on landing page and will 
 
 ## Mock UP of UI
 
-- ![Desktop View] ()
-- ![Mobile View] ()
+- ![Desktop View] (https://imgur.com/a/0G9d5VU)
+- ![Mobile View] (https://imgur.com/a/0G9d5VU)
 
 |ENDPOINT | Method | Purpose|
 |/ | get| List Country|
