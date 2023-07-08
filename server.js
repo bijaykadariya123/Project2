@@ -3,6 +3,7 @@ require("dotenv").config()
 const express = require("express");
 const morgan = require("morgan");
 const methodOverride = require("method-override")
+const countryRoutes= require("./controllers/countryRoutes.js")
 
 // express application
 const app = express()
@@ -12,16 +13,14 @@ const app = express()
 app.use(morgan("dev"))
 app.use(methodOverride("_method"));
 app.use(express.static("public"));
+app.use(express.urlencoded({extended:false}))
 
 // Routes
-
-app.get("/", (req, res)=>{
-    res.send("Hello World")
-})
+app.use("/", countryRoutes)
 
 
 // Server Listener
-const PORT = process.env.PORT || 3009
+const PORT = process.env.PORT
 
 app.listen(PORT, ()=>{
     console.log(`${PORT} is working`);

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <div class="main" >
+           
+            <img src="<%= oneCountry.flagImageUrl %>" alt="Image">
+            <ul>
+                <li>Name: <%=oneCountry.countryName %></li>
+                <li>Capital:<%=oneCountry.capitalCity%></li>
+                <li>Population:<%=oneCountry.population%></li>
+                <li>Is Developed:<%=oneCountry.developedCountry%></li>
+
+            </ul>
+            <div class="buttons">
+                <a href="/<%= oneCountry._id%>/edit"><button>Edit</button></a>
+                <form action="/<%= oneCountry._id %>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE"/>
+                </form>
+                <a href="/"><button>Home Page</button></a>
+            </div>   
+        </div>
+        
+    </body>
+</body>
+</html>

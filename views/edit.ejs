@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h2>Edit</h2>
+        <form method="post" action="/<%= oneCountry._id%>?_method=PUT">
+            <label>Country: <br><input type="text" name="countryName" value="<%=oneCountry.countryName%>"  /></label><br>
+            <label>Capital: <br><input type="text" name="capitalCity"value="<%=oneCountry.capitalCity%>" /></label><br>
+            <label>Population: <br><input type="number" name="population" value="<%=oneCountry.population%>" /></label><br>
+            <label>Image: <br><input type="text" name="flagImageUrl" value="<%=oneCountry.flagImageUrl%>" /></label><br>
+            <label> IsDeveloped: <input type="checkbox" name="developedCountry" <%=oneCountry.developedCountry ? "checked": "" %> /></label><br>
+            <div style="display:inline-flex">
+                <input type="submit"  value="Edit"/>
+                <a href="/"><button>Home Page</button></a>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+</html>
