@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%- include("./partials/files.ejs") %>
 </head>
 <body>
     <body>
+        <%- include("./partials/header.ejs") %>
         <div class="main" >
            
-            <img src="<%= oneCountry.flagImageUrl %>" alt="Image">
-            <ul>
-                <li>Name: <%=oneCountry.countryName %></li>
-                <li>Capital:<%=oneCountry.capitalCity%></li>
-                <li>Population:<%=oneCountry.population%></li>
-                <li>Is Developed:<%=oneCountry.developedCountry%></li>
+            <img src="<%= oneCountry.flagImageUrl %>" alt="Image" class="showImage">
+            <div class="ulShow">
+                <ul>
+                    <li class ="li-item"><span style="font-weight: 700;">Country:&nbsp;&nbsp;</span> <%=oneCountry.countryName %></li>
+                    <li class ="li-item"><span style="font-weight: 700;">Capital:&nbsp;&nbsp;</span><%=oneCountry.capitalCity%></li>
+                    <li class ="li-item"><span style="font-weight: 700;">Population:&nbsp;&nbsp;</span><%=oneCountry.population%></li>
+                    <li class ="li-item"><span style="font-weight: 700;">Is Developed:&nbsp;&nbsp;</span><%=oneCountry.developedCountry%></li>
 
-            </ul>
+                </ul>
+            </div>
             <div class="buttons">
                 <a href="/<%= oneCountry._id%>/edit"><button>Edit</button></a>
                 <form action="/<%= oneCountry._id %>?_method=DELETE" method="POST">
