@@ -1,8 +1,33 @@
 body{
-    background-color: black;
+   background-image: url("https://media.istockphoto.com/id/1326289142/vector/detailed-colorful-global-world-map-with-borders-and-names-of-countries-seas-and-oceans.jpg?s=612x612&w=0&k=20&c=K1pPNV4DnvSLYUJvE-iJnrJRpOaNlHFyMy5fBxcN0Mc=");
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
 }
 
+/*  //////////////////////////////Index CSS///////////////////////////*/
+#indexButton{
+    margin-bottom: 1em;
+}
+.indexMain{
+    padding:1em;
+}
+
+.indexImg{
+    opacity: 90%;
+    border-radius: 1em;
+}
+.indexImg:hover{
+    opacity: 60%;
+    transform: scale(1.07);
+}
+a{
+    text-decoration: none;
+}
 /*  //////////////////////////////SHOW PAGE CSS///////////////////////*/
+.showMain{
+    padding:1em;
+}
 .showImage{
     width:100%;
     height: 40em;
@@ -17,3 +42,36 @@ body{
     display: flex;
     justify-content:center;
 }
+.buttons{
+    display:flex;
+    justify-content: center;
+}
+
+/*  //////////////////////////////New/EditPAGE CSS///////////////////////*/
+
+.newH2{
+    color:white;
+}
+.newButton{
+    margin-top:1em;
+}
+.newLabel, .editLabel{
+    color:white;
+    font-weight: 700;
+}
+.newMain, .editMain{
+
+    width: 15rem;
+    margin: 0 auto;
+    
+}
+.newSubMain, .editMain{
+    padding:0.3em;
+}
+
+
+
+/*  //////////////////////////////Edit PAGE CSS///////////////////////*/
+
+
+/*  //////////////////////////////Responsive PAGE CSS///////////////////////*/

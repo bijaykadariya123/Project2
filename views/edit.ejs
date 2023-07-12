@@ -8,19 +8,22 @@
 </head>
 <body>
     <%- include("./partials/header.ejs") %>
-    <div class="main">
-        <h2>Edit</h2>
-        <form method="post" action="/<%= oneCountry._id%>?_method=PUT">
-            <label>Country: <br><input type="text" name="countryName" value="<%=oneCountry.countryName%>"  /></label><br>
-            <label>Capital: <br><input type="text" name="capitalCity"value="<%=oneCountry.capitalCity%>" /></label><br>
-            <label>Population: <br><input type="number" name="population" value="<%=oneCountry.population%>" /></label><br>
-            <label>Image: <br><input type="text" name="flagImageUrl" value="<%=oneCountry.flagImageUrl%>" /></label><br>
-            <label> IsDeveloped: <input type="checkbox" name="developedCountry" <%=oneCountry.developedCountry ? "checked": "" %> /></label><br>
-            <div style="display:inline-flex">
-                <input type="submit"  value="Edit"/>
-                <a href="/"><button>Home Page</button></a>
-            </div>
-        </form>
+    <div style ="padding-left:1em;">
+        <a href="/"><button class="btn btn-outline-primary">Home Page</button></a>
+    </div>
+    <div class="editMain">
+        <div class ="editSubMain">
+            <form method="post" action="/<%= oneCountry._id%>?_method=PUT">
+                <div class="labelEdit">
+                    <label class ="editLabel">Country: <br><input class="input-group-text" type="text" name="countryName" value="<%=oneCountry.countryName%>"  /></label><br>
+                    <label class ="editLabel">Capital: <br><input class="input-group-text" type="text" name="capitalCity"value="<%=oneCountry.capitalCity%>" /></label><br>
+                    <label class ="editLabel">Population: <br><input class="input-group-text" type="number" name="population" value="<%=oneCountry.population%>" /></label><br>
+                    <label class ="editLabel">Image: <br><input class="input-group-text" type="text" name="flagImageUrl" value="<%=oneCountry.flagImageUrl%>" /></label><br>
+                    <label class ="editLabel"> IsDeveloped: <input type="checkbox" name="developedCountry" <%=oneCountry.developedCountry ? "checked": "" %> /></label><br>
+                </div>
+                    <input class="btn btn-outline-primary" type="submit"  value="Edit"/>
+            </form>
+        </div>
     </div>
 
 

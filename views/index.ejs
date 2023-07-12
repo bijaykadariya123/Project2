@@ -22,14 +22,14 @@
 </head>
 <body>
     <%- include("./partials/header.ejs") %>
-    <div class = "main">
-        <a href="/new"><button>Add New Country</button></a>
+    <div class = "indexMain">
+        <a href="/new"><button class="btn btn-outline-primary" id ="indexButton">Add New Country</button></a>
 
          <div class="image-container">
             <% allCountries.forEach((country, index)=>{%>
                 <a href="/show/<%= country._id%>">  
-                    <img src="<%= country.flagImageUrl %>" alt="Image">
-                    <h3><%= country.countryName%></h3>
+                    <img class ="indexImg"src="<%= country.flagImageUrl %>" alt="Image">
+                    <h3 style="text-align: center;"><%= country.countryName%></h3>
                 </a> 
                <% })%>
         </div>
