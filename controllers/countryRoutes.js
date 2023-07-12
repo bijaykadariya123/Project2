@@ -13,7 +13,7 @@ router.get("/", async(req, res)=>{
     const allCountries = await countryModel.find({})
     res.render("index.ejs", {allCountries}) 
 })
-/////////////////////////////////////////////////////////////////////////////////// NEW
+///////////////////////////////////////////////////////////////////////////////// NEW
 router.get("/new", (req, res)=>{
     res.render("new.ejs")
 } )
@@ -50,7 +50,7 @@ router.get('/:id/edit', async (req, res) => {
 })
 
 /////////////////////////////////////////////////////////////////////////////////////////SHOW
-router.get("/:id", async (req, res)=>{
+router.get("/show/:id", async (req, res)=>{
     const id = req.params.id
     const oneCountry =  await countryModel.findById(id)
     res.render("show.ejs", {oneCountry, id})

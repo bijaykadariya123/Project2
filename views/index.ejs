@@ -27,7 +27,7 @@
 
          <div class="image-container">
             <% allCountries.forEach((country, index)=>{%>
-                <a href="/<%= country._id%>">  
+                <a href="/show/<%= country._id%>">  
                     <img src="<%= country.flagImageUrl %>" alt="Image">
                     <h3><%= country.countryName%></h3>
                 </a> 
