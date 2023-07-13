@@ -10,11 +10,11 @@
     <body>
         <%- include("./partials/header.ejs") %>
         <div style ="padding-left:1em;">
-        <a href="/"><button class="btn btn-outline-primary">Home Page</button></a>
+        <a href="/"><button class="btn btn-success">Home Page</button></a>
         </div>
         <div class="showMain" >
            
-            <img src="<%= oneCountry.flagImageUrl %>" alt="Image" class="showImage">
+            <img style = "border-radius: 0.5rem; opacity: 70%;" src="<%= oneCountry.flagImageUrl %>" alt="Image" class="showImage">
             <div class="ulShow">
                 <ul>
                     <li class ="li-item"><span style="font-weight: 700;">Country:&nbsp;&nbsp;</span> <%=oneCountry.countryName %></li>
@@ -25,9 +25,9 @@
                 </ul>
             </div>
             <div class="buttons">
-                <a href="/<%= oneCountry._id%>/edit"><button class="btn btn-outline-primary"style="margin-right:0.5em;">Edit</button></a>
+                <a href="/<%= oneCountry._id%>/edit"><button class="btn btn-success"style="margin-right:0.5em;">Edit</button></a>
                 <form action="/<%= oneCountry._id %>?_method=DELETE" method="POST">
-                <input class="btn btn-outline-primary" type="submit" value="DELETE"/>
+                <input class="btn btn-outline-danger" type="submit" value="DELETE"/>
                 </form>
             </div>   
         </div>

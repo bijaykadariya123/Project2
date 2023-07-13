@@ -9,7 +9,7 @@
 <body>
     <%- include("./partials/header.ejs") %>
     <div style ="padding-left:1em;">
-        <a href="/"><button class="btn btn-outline-primary">Home Page</button></a>
+        <a href="/"><button class="btn btn-success">Home Page</button></a>
     </div>
     <div class="editMain">
         <div class ="editSubMain">
@@ -21,7 +21,7 @@
                     <label class ="editLabel">Image: <br><input class="input-group-text" type="text" name="flagImageUrl" value="<%=oneCountry.flagImageUrl%>" /></label><br>
                     <label class ="editLabel"> IsDeveloped: <input type="checkbox" name="developedCountry" <%=oneCountry.developedCountry ? "checked": "" %> /></label><br>
                 </div>
-                    <input class="btn btn-outline-primary" type="submit"  value="Edit"/>
+                    <input class="btn btn-success" type="submit"  value="Edit"/>
             </form>
         </div>
     </div>
